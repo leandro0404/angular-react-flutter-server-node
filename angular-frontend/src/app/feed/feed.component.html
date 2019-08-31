@@ -1,0 +1,26 @@
+<section id="post-list">
+          <article *ngFor="let post of posts">
+          <header>
+              <div class="user-info">
+                 <span> {{ post.author }} </span>
+                 <span class="place"> {{post.place}}</span>
+              </div>            
+              <img src="assets/more.svg" alt="Mais"/>
+          </header>         
+          <img src="http://localhost:3333/files/{{post.image}}"/>          
+          <footer>
+             <div class="actions">
+                 <button type="button"  (click)="handlerLike(post._id)" >
+                 <img src="assets/like.svg" />
+                 </button>
+                 <img src="assets/comment.svg"/>
+                 <img src="assets/send.svg"/>
+             </div>    
+             <strong>{{post.likes}}</strong>            
+             <p> 
+                 {{post.description}}
+                  <span> {{post.hashtags}}</span> 
+             </p>              
+          </footer>
+      </article>     
+</section>

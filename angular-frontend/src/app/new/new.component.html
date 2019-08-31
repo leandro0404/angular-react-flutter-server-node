@@ -1,0 +1,43 @@
+<form id="new-post" (ngSubmit)="submit()">
+   
+        <input type="file" #fileInput
+        name="image"
+        [(ngModel)]="model.image"
+        onChange={this.handleImageChange}
+        />
+
+        <input 
+             type="text" 
+             id="author"
+             name="author"
+             placeholder="Autor do post"
+             [(ngModel)]="model.author" 
+            
+         />
+        
+         <input 
+             type="text" 
+             id="place"
+             name="place" 
+             placeholder="Local do post"
+             [(ngModel)]="model.place"
+         />
+    
+         <input 
+             type="text" 
+             id="description"
+             name="description" 
+             placeholder="Descrição do post"
+             [(ngModel)]="model.description"
+         />
+    
+         <input 
+             type="text" 
+             id="hashtags"
+             name="hashtags" 
+             placeholder="Hashtags do post"
+             [(ngModel)]="model.hashtags"
+         />
+        
+         <button type="submit">Enviar</button>
+    </form>
